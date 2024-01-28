@@ -1,0 +1,36 @@
+<!-- -->
+<launch>
+  <arg name='host' default='localhost'/>
+  <arg name='port' default='2000'/>
+  <arg name='timeout' default='5000'/>
+  <arg name="role_name" default="ego" />
+
+  <param name="/carla/host" value="$(arg host)" />
+  <param name="/carla/port" value="$(arg port)" />
+  <param name="/carla/timeout" value="$(arg timeout)" />
+
+  <node pkg="carla_waypoint_publisher" type="carla_waypoint_publisher.py" name="carla_waypoint_publisher_ego">
+    <param name="role_name" value="$(arg role_name)" />
+  </node>
+
+  <!-- <node pkg="carla_waypoint_publisher" type="carla_waypoint_publisher_fake.py" name="carla_waypoint_publisher_agent1_fake_s">
+    <param name="role_name" value="$(arg role_name)" />
+    <param name="target" value="s"/>
+  </node>
+
+  <node pkg="carla_waypoint_publisher" type="carla_waypoint_publisher_fake.py" name="carla_waypoint_publisher_agent1_fake_l" >
+    <param name="role_name" value="$(arg role_name)" />
+    <param name="target" value="l"/>
+  </node>
+
+  <node pkg="carla_waypoint_publisher" type="carla_waypoint_publisher_fake.py" name="carla_waypoint_publisher_agent1_fake_r" >
+    <param name="role_name" value="$(arg role_name)" />
+    <param name="target" value="r"/>
+  </node>
+
+  <node pkg="asdleng_waypoint_publishers" type="prob" name="carla_waypoint_publisher_agent1_prob">
+    <param name="role_name" value="$(arg role_name)" />
+  </node> -->
+
+</launch>
+

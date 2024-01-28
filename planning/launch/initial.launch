@@ -1,0 +1,20 @@
+ <launch>
+    <include file="$(find ndt_localizer)/launch/map_loader.launch" />
+    <include file="$(find carla_ros_bridge)/launch/carla_ros_bridge_pomdp.launch" />
+    <!-- <include file="$(find carla_ego_vehicle)/launch/carla_example_ego_vehicle_pomdp.launch" /> -->
+    <include file="$(find agent_vehicle)/launch/example_agent_vehicles.launch" />
+    <!-- <include file="$(find carla_manual_control)/launch/carla_manual_control_ego.launch" /> -->
+    <!-- <include file="$(find carla_spectator_camera)/launch/carla_spectator_camera_agent.launch" /> -->
+    <include file="$(find planning)/launch/waypoint_publishers.launch" />
+    <!-- <include file="$(find asdleng_waypoint_publishers)/launch/carla_ego_waypoint_publisher.launch" /> -->
+
+    <!-- <include file="$(find predict)/launch/predict.launch" /> -->
+    <!-- <include file="$(find control)/launch/control.launch" /> -->
+
+    <!-- <node pkg="asdleng" type="scenario_manager" name="scenario_manager" output="screen">
+        <param name="intention1" value='2' />
+        <param name="intention2" value='1' />
+    </node> -->
+    
+    <!-- <node pkg="rviz" type="rviz" name="rviz" args="-d $(find asdleng)/cfg/default.rviz" /> -->
+</launch>

@@ -1,0 +1,44 @@
+<!-- -->
+<launch>
+  <arg name='host' default='localhost'/>
+  <arg name='port' default='2000'/>
+  <arg name='timeout' default='5000'/>
+  
+  <arg name="vehicle_filter1" default="vehicle.audi.a2" />
+  <arg name="sensor_definition_file1" default="$(find agent_vehicle)/config/agent_vehicle.json"/>
+  <arg name="role_name1" default="ego1"/>
+  <!-- use comma separated format "x,y,z,roll,pitch,yaw" -->
+  <arg name="spawn_point1" default="-39.938,135.0,1,0,0,0"/>
+  <arg name="spawn_agent_vehicle1" default="True" />
+
+  <include file="$(find agent_vehicle)/launch/agent_vehicle1.launch">
+    <arg name='host' value='$(arg host)'/>
+    <arg name='port' value='$(arg port)'/>
+    <arg name='timeout' value='$(arg timeout)'/>
+    <arg name="vehicle_filter" value='$(arg vehicle_filter1)'/>
+    <arg name="sensor_definition_file" value='$(arg sensor_definition_file1)'/>
+    <arg name="role_name" value="$(arg role_name1)"/>
+    <arg name="spawn_point" value="$(arg spawn_point1)"/>
+    <arg name="spawn_agent_vehicle" value="$(arg spawn_agent_vehicle1)" />
+  </include>
+
+  <arg name="vehicle_filter2" default="vehicle.audi.a2" />
+  <arg name="sensor_definition_file2" default="$(find agent_vehicle)/config/agent_vehicle.json"/>
+  <arg name="role_name2" default="agent"/>
+
+  <arg name="spawn_point2" default="24.163,130.0,1,0,0,180"/>
+  <arg name="spawn_agent_vehicle2" default="True" />
+
+  <include file="$(find agent_vehicle)/launch/agent_vehicle2.launch">
+    <arg name='host' value='$(arg host)'/>
+    <arg name='port' value='$(arg port)'/>
+    <arg name='timeout' value='$(arg timeout)'/>
+    <arg name="vehicle_filter" value='$(arg vehicle_filter2)'/>
+    <arg name="sensor_definition_file" value='$(arg sensor_definition_file2)'/>
+    <arg name="role_name" value="$(arg role_name2)"/>
+    <arg name="spawn_point" value="$(arg spawn_point2)"/>
+    <arg name="spawn_agent_vehicle" value="$(arg spawn_agent_vehicle2)" />
+  </include>
+
+
+</launch>

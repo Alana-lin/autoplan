@@ -1,0 +1,7 @@
+<!-- -->
+<launch>
+    <include file="$(find planning)/launch/carla_agent1_waypoint_publisher.launch" />
+    <include file="$(find planning)/launch/carla_agent2_waypoint_publisher.launch" />
+    <!-- <include file="$(find planning)/launch/carla_ego_waypoint_publisher.launch" /> -->
+
+</launch>

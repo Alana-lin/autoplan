@@ -1,0 +1,11 @@
+ <launch>
+    <!--node pkg="control" type="control2" name="control2"/-->
+    <node pkg="control" type="control" name="control1" output="screen">
+         <param name="role" value="ego" type="string"/>
+    </node>
+
+    <node pkg="control" type="control" name="control2" output="screen">
+         <param name="role" value="agent" type="string"/>
+    </node>
+    
+ </launch>

@@ -1,0 +1,14 @@
+locatlization_ego_topic: /carla/ego/odometry
+locatlization_agent_topic: /carla/agent/odometry
+referpath_ego_topic: /carla/ego/waypoints
+referpath_agent_topic: /carla/agent/waypoints
+refervel_ego_topic: /carla/ego/velocity
+refervel_agent_topic: /carla/agent/velocity
+prediction_topic: /carla/agent/trajectory
+trajectory_topic: /carla/ego/trajectory
+
+predict_horizon: 100
+K: 0.7027
+dt: 0.04
+r: 2.2061
+

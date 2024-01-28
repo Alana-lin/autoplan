@@ -1,0 +1,12 @@
+localization_topic: /odometry
+trajectory_topic: /trajectory
+velocity_topic: /velocity
+control_cmd_topic: /vehicle_control_cmd
+
+puresuit_K: 0.1                 #跟速度相关的预瞄参数
+puresuit_Lfc: 2.0 
+Wheelbase_L: 1.5              #车辆轴距
+Hard_Brake_P: 20                #强制动模式下的压力值(0~40)
+PID_Kpb: 10                    #P 
+PID_Kib: 1                      #i
+PID_Kdb: 0                     #d
